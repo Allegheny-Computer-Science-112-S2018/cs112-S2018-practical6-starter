@@ -1,4 +1,4 @@
-package labseven.data;
+package practicalsix.data;
 
 import java.util.Arrays;
 
