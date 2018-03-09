@@ -155,19 +155,16 @@ if [ "$CHECK" = true ]; then
   printf "%s\n" "${blu}Starting to check with GatorGrader...${end}"
   # ADD ADDITIONAL CALLS TO BOTH gatorgrader.py and determine_exit_code HERE
   # --> GatorGrader CHECK: at least 8 "println(" fragment exists in the code
-  python3 gatorgrader/gatorgrader.py --nowelcome --directories src/main/java/labseven/experiment \
+  python3 gatorgrader/gatorgrader.py --nowelcome --directories src/main/java/practicalsix/experiment \
                                      --checkfiles Experiment.java --fragments "println(" --fragmentcounts 8
   determine_exit_code $?
   # --> GatorGrader CHECK: at least 3 "public static void" fragment exists in the code
-  python3 gatorgrader/gatorgrader.py --nowelcome --directories src/main/java/labseven/experiment \
+  python3 gatorgrader/gatorgrader.py --nowelcome --directories src/main/java/practicalsix/experiment \
                                      --checkfiles Experiment.java --fragments "public static void" --fragmentcounts 3
   determine_exit_code $?
   # --> GatorGrader CHECK: at least 3 "println(" fragment exists in the code
-  python3 gatorgrader/gatorgrader.py --nowelcome --directories src/main/java/labseven/experiment \
+  python3 gatorgrader/gatorgrader.py --nowelcome --directories src/main/java/practicalsix/experiment \
                                      --checkfiles RunCampaign.java --fragments "println(" --fragmentcounts 3
-  determine_exit_code $?
-  # --> GatorGrader CHECK: the repository contains at least five beyond current commit count
-  python3 gatorgrader/gatorgrader.py --nowelcome --commits 21
   determine_exit_code $?
  echo ""
   printf "%s\n" "${blu}... Finished checking with GatorGrader${end}"
