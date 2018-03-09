@@ -35,29 +35,16 @@ the commit logs.
 This assignment requires a programmer to implement and test a benchmarking
 framework that supports the empirical evaluation of `IterativeFactorial` and
 `RecursiveFactorial`. More details about recursive algorithms are provided in
-Sections 5.1 through 5.5, with Section 5.5 specifically furnishing specific
-details about the `RecursiveFactorial` method. You can also learn about
-experimental studies by reviewing the content in Sections 4.1 through 4.3.
-Please note that this assignment will also require you to read and use Java
-classes that contain a test suite. Also, you can learn more about iterative
-algorithms by reviewing Section 1.5.2. Finally, the programmer is also
-responsible for learning how to run and extend a test suite written in the JUnit
-testing framework, as explained in Section 1.9. As verified by
+Sections 5.1 through 5.5. You can also learn about experimental studies by
+reviewing the content in Sections 4.1 through 4.3. Please note that this
+assignment will also require you to read and use Java classes that contain a
+test suite. Also, you can learn more about iterative algorithms by reviewing
+Section 1.5.2. Finally, the programmer is also responsible for learning how to
+run and extend a test suite written in the JUnit testing framework, as explained
+in Section 1.9. As verified by
 [Checkstyle](https://github.com/checkstyle/checkstyle), the source code for all
 of the Java classes must adhere to all of the requirements in the [Google Java
 Style Guide](https://google.github.io/styleguide/javaguide.html).
-
-The programmer is also responsible for writing a reflection, stored in the file
-`writing/reflection.md`, that responds to the questions in the assignment sheet
-and explains the challenges that you faced and the solutions you developed.
-Please note that this is a Markdown file that must adhere to the standards
-described in the [Markdown Syntax
-Guide](https://guides.github.com/features/mastering-markdown/). Remember, you
-can preview the contents of a comitted Markdown file by clicking on the name of
-the file in your GitHub repository. Finally, don't forget that your
-`writing/reflection.md` file should adhere to the Markdown standards established
-by the [Markdown linting tool](https://github.com/markdownlint/markdownlint) and
-the writing standards set by the [Proselint tool](http://proselint.com/).
 
 The source code in the submitted Java source code files must also pass
 additional tests set by the [GatorGrader
@@ -66,7 +53,10 @@ check to ensure that `Experiment` and `RunCampaign` have `println` statements
 that can produce the output from running a campaign of experiments. GatorGrader
 will also run a JUnit test suite that will perform many checks on your
 implementation of the Java classes. More details about the GatorGrader checks
-are included later in this document and in the assignment sheet.
+are included later in this document and in the assignment sheet. With that said,
+since this assignment invites a student to practice designing and implementing
+their own system, several of the checks will be directly undertaken by the
+course instructor.
 
 When you use the `git commit` command to transfer your source code to your
 GitHub repository, [Travis CI](https://travis-ci.com/) will initialize a build
