@@ -1,7 +1,7 @@
-package labseven.experiment;
+package practicalsix.experiment;
 
-import labseven.computation.ArithmeticComputation;
-import labseven.data.ResultsTable;
+import practicalsix.computation.ArithmeticComputation;
+import practicalsix.data.ResultsTable;
 
 /**
  * A Campaign interface used to run an experiment.

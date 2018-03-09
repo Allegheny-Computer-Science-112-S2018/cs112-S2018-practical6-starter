@@ -1,8 +1,8 @@
-package labseven.experiment;
+package practicalsix.experiment;
 
-import labseven.computation.IterativeFibonacciComputation;
-import labseven.computation.RecursiveFibonacciComputation;
-import labseven.data.ResultsTable;
+import practicalsix.computation.IterativeFactorialComputation;
+import practicalsix.computation.RecursiveFactorialComputation;
+import practicalsix.data.ResultsTable;
 
 /**
  * An Experiment class that can run a campaign of experiments.
@@ -14,23 +14,23 @@ import labseven.data.ResultsTable;
 
 public class Experiment {
 
-  /** The campaign length for the RecursiveFibonacciComputation. */
-  private static final int RECURSIVE_FIBONACCI_CAMPAIGN_LENGTH = 6;
+  /** The campaign length for the RecursiveFactorialComputation. */
+  private static final int RECURSIVE_FACTORIAL_CAMPAIGN_LENGTH = 10;
 
-  /** The campaign length for the IterativeFibonacciComputation. */
-  private static final int ITERATIVE_FIBONACCI_CAMPAIGN_LENGTH = 23;
+  /** The campaign length for the IterativeFactorialComputation. */
+  private static final int ITERATIVE_FACTORIAL_CAMPAIGN_LENGTH = 10;
 
   /** Run the recursive experiment. */
   public static void runRecursiveExperiment() {
     RunCampaign runComputationCampaign = new RunCampaign();
-    // Create a RecursiveFibonacciComputation and run it in a campaign
-    RecursiveFibonacciComputation recursiveFibonacci = new RecursiveFibonacciComputation();
-    ResultsTable recursiveFibonacciResultsTable =
-        runComputationCampaign.run(recursiveFibonacci, RECURSIVE_FIBONACCI_CAMPAIGN_LENGTH);
+    // Create a RecursiveFactorialComputation and run it in a campaign
+    RecursiveFactorialComputation recursiveFactorial = new RecursiveFactorialComputation();
+    ResultsTable recursiveFactorialResultsTable =
+        runComputationCampaign.run(recursiveFactorial, RECURSIVE_FACTORIAL_CAMPAIGN_LENGTH);
     System.out.println();
     System.out.println("Results of an experiment campaign with "
-                       + recursiveFibonacci.getName() + ":\n");
-    System.out.println(recursiveFibonacciResultsTable.toString());
+                       + recursiveFactorial.getName() + ":\n");
+    System.out.println(recursiveFactorialResultsTable.toString());
     System.out.println();
   }
 
