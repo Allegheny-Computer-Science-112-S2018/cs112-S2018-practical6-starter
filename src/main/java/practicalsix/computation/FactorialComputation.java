@@ -1,19 +1,19 @@
-package labseven.computation;
+package practicalsix.computation;
 
 /**
- * An abstract class for a FibonacciComputation.
+ * An abstract class for a FactorialComputation.
  *
  * @author Gregory M. Kapfhammer
  */
 
-public abstract class FibonacciComputation extends ArithmeticComputation {
+public abstract class FactorialComputation extends ArithmeticComputation {
 
   /** The default name of the class performing fibonacci computation. */
-  private static final String DEFAULT_FIBONACCI_COMPUTER = "Fibonacci";
+  private static final String DEFAULT_FACTORIAL_COMPUTER = "Factorial";
 
   /** Configure the name of the arithmetic computation. */
-  public FibonacciComputation() {
-    name = DEFAULT_FIBONACCI_COMPUTER;
+  public FactorialComputation() {
+    name = DEFAULT_FACTORIAL_COMPUTER;
   }
 
 }
