@@ -89,10 +89,11 @@ To do well on this assignment, you should also Section 1.5.2 to learn more about
 iteration constructs. You should also review Sections 4.1 to 4.3, focusing on
 the content that explains the steps of both an analytical and empirical
 evaluation of an algorithm. To learn more about recursion, please read Sections
-5.1 through 5.5, focusing on Section 5.1's introduction to recursion and Section
-5.5's Code Fragment 5.13 that explains the `RecursiveFactorial` algorithm.
-Please see the course instructor or one of the teaching assistants or tutors if
-you have questions about any of these reading assignments.
+5.1 through 5.5, focusing on Section 5.1's introduction to recursion, the
+different types of recursion that are highlighted in Section 5.3, and the
+strategies for designing recursive algorithms in Section 5.4. Please see the
+course instructor or one of the teaching assistants or tutors if you have
+questions about any of these reading assignments.
 
 ## Commands
 
