@@ -129,8 +129,6 @@ if [ "$CHECK" = true ]; then
   echo ""
   mdl README.md
   determine_exit_code $? "mdl README.md"
-  mdl writing/reflection.md
-  determine_exit_code $? "mdl writing/reflection.md"
   echo ""
   printf "%s\n" "${blu}...Finished checking the correctness of your technical writing${end}"
 
