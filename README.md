@@ -20,12 +20,12 @@ PROBLEMS?
 
 -->
 
-# cs112-S2018-lab7-starter
+# cs112-S2018-practical6-starter
 
 Designed for use with [GitHub Classroom](https://classroom.github.com/), this
-repository contains the starter for Laboratory 7 in Computer Science 112. Since
-the Travis builds for this repository will initially fail (as evidenced by a red
-&#x2717; appearing in the commit logs instead of a green &#x2714;), the
+repository contains the starter for Practical 6 in Computer Science 112. Since
+the Travis builds for this repository will initially fail (as evidenced by a
+red &#x2717; appearing in the commit logs instead of a green &#x2714;), the
 programmer is responsible for completing all of the steps needed to satisfy the
 requirements for the assignment, thus causing a &#x2714; to instead appear in
 the commit logs.
@@ -33,10 +33,10 @@ the commit logs.
 ## Introduction
 
 This assignment requires a programmer to implement and test a benchmarking
-framework that supports the empirical evaluation of `IterativeFibonacci` and
-`RecursiveFibonacci`. More details about recursive algorithms are provided in
+framework that supports the empirical evaluation of `IterativeFactorial` and
+`RecursiveFactorial`. More details about recursive algorithms are provided in
 Sections 5.1 through 5.5, with Section 5.5 specifically furnishing specific
-details about the `RecursiveFibonacci` method. You can also learn about
+details about the `RecursiveFactorial` method. You can also learn about
 experimental studies by reviewing the content in Sections 4.1 through 4.3.
 Please note that this assignment will also require you to read and use Java
 classes that contain a test suite. Also, you can learn more about iterative
@@ -100,7 +100,7 @@ iteration constructs. You should also review Sections 4.1 to 4.3, focusing on
 the content that explains the steps of both an analytical and empirical
 evaluation of an algorithm. To learn more about recursion, please read Sections
 5.1 through 5.5, focusing on Section 5.1's introduction to recursion and Section
-5.5's Code Fragment 5.13 that explains the `RecursiveFibonacci` algorithm.
+5.5's Code Fragment 5.13 that explains the `RecursiveFactorial` algorithm.
 Please see the course instructor or one of the teaching assistants or tutors if
 you have questions about any of these reading assignments.
 
@@ -139,97 +139,20 @@ If the course instructor publishes a new version of GatorGrader and asks you to
 access it, then you need change into the tool's directory by typing `cd
 gatorgrader`. Then, you can type the command `git pull` to download the new
 source code for the GatorGrader tool. If this command completes successfully,
-then you can return to the main directory for this laboratory assignment by
+then you can return to the main directory for this practical assignment by
 typing `cd ..` and then continuing your work.
 
 ## Output
 
-Typing the command `gradle run` in the terminal window produces the following
-output for the instructor's version of `labseven.experiment.Experiment`.
-Critically, the timing values and order of growth ratios may be different when
-you run the experiment on your own computer. You should also see that the
-`IterativeFibonacciComputation` is run for more rounds than is the
-`RecursiveFibonacciComputation`. Why is that the case? Make sure that you try to
-run the `RecursiveFibonacciComputation` in an experiment campaign that lasts for
-at least one more round than is the current default. Finally, please note that
-this laboratory assignment invites you to run a comprehensive JUnit test suite
-of multiple Java classes in multiple packages. While this test suite does not
-produce any output, you should carefully inspect its tests so that you
-understand their strategy.
-
-```
-Starting a campaign of experiments with IterativeFibonacciComputation ...
-  Running round 0 with input size 1
-  Running round 1 with input size 2
-  Running round 2 with input size 4
-  Running round 3 with input size 8
-  Running round 4 with input size 16
-  Running round 5 with input size 32
-  Running round 6 with input size 64
-  Running round 7 with input size 128
-  Running round 8 with input size 256
-  Running round 9 with input size 512
-  Running round 10 with input size 1024
-  Running round 11 with input size 2048
-  Running round 12 with input size 4096
-  Running round 13 with input size 8192
-  Running round 14 with input size 16384
-  Running round 15 with input size 32768
-  Running round 16 with input size 65536
-  Running round 17 with input size 131072
-  Running round 18 with input size 262144
-  Running round 19 with input size 524288
-  Running round 20 with input size 1048576
-  Running round 21 with input size 2097152
-  Running round 22 with input size 4194304
-... Finishing a campaign of experiments with IterativeFibonacciComputation
-
-Results of an experiment campaign with IterativeFibonacciComputation:
-
-Size (#)        Timing (ms)     Ratio (#)
-1               0               0
-2               0               0
-4               0               0
-8               0               0
-16              0               0
-32              0               0
-64              0               0
-128             0               0
-256             0               0
-512             0               0
-1024            0               0
-2048            0               0
-4096            0               0
-8192            1               0
-16384           0               0
-32768           1               0
-65536           2               2
-131072          1               1
-262144          1               1
-524288          1               1
-1048576         1               1
-2097152         1               1
-4194304         2               2
-
-Starting a campaign of experiments with RecursiveFibonacciComputation ...
-  Running round 0 with input size 1
-  Running round 1 with input size 2
-  Running round 2 with input size 4
-  Running round 3 with input size 8
-  Running round 4 with input size 16
-  Running round 5 with input size 32
-... Finishing a campaign of experiments with RecursiveFibonacciComputation
-
-Results of an experiment campaign with RecursiveFibonacciComputation:
-
-Size (#)        Timing (ms)     Ratio (#)
-1               0               0
-2               0               0
-4               0               0
-8               0               0
-16              0               0
-32              13              0
-```
+When you type the command `gradle run` in the terminal window it should produce
+output from running your version of `practicalsix.experiment.Experiment`.
+Critically, the output should contain a table with timing values and order of
+growth ratios that may be different than what you see on the screen of your
+colleague's computer. Finally, please note that this practical assignment
+invites you to create and run a comprehensive JUnit test suite of multiple Java
+classes in multiple packages. While this test suite does not produce any
+output, you should carefully inspect its tests so that you understand their
+strategy.
 
 ## Checking
 
@@ -240,9 +163,17 @@ document, your final submission must meet the following requirements.
 - `Experiment.java` declares three methods with `public static void`.
 - `RunCampaign.java` contains three `println`s to produce the experiment output.
 - All of the Java classes have methods that pass the provided JUnit test suite.
-- Contains a total of one paragraph of writing for each of the reflection questions.
-- Consists of at least five commits beyond the commit number when starting the
-  assignment.
+
+Please note that a primary objective for this practical assignment is for each
+student to practice creating their own Java classes and JUnit test cases. As
+such, you should carefully review the source code from prior assignments so as
+to ensure that you can correctly create the required `IterativeFactorial` and
+`RecursiveFactorial` classes and several test cases in the
+`TestArithmeticComputations` JUnit test suite. You should also review the source
+code from previous assignments that showed you how to create and run a campaign
+of experiments. Since each student is being given the opportunity to design and
+implement their own solution, many of the checks for this practical assignment
+will be directly undertaken by the course instructor.
 
 ## Updates
 
@@ -251,7 +182,7 @@ you would like to receive these updates, then you can type this command in the
 main directory for this assignment:
 
 ```
-./gatorgrader.sh --update git@github.com:Allegheny-Computer-Science-112-S2018/cs112-S2018-lab7-starter.git
+./gatorgrader.sh --update git@github.com:Allegheny-Computer-Science-112-S2018/cs112-S2018-practical6-starter.git
 ```
 
 You should only need to type this command once; typing the command additional
@@ -293,27 +224,27 @@ developed for the following software and versions:
 ## Problems
 
 If you have found a problem with this assignment's provided source code, then
-you can go to the [Computer Science 112 Lab 5
-Starter](https://github.com/Allegheny-Computer-Science-112-S2018/cs112-S2018-lab7-starter)
+you can go to the [Computer Science 112 Practical 6
+Starter](https://github.com/Allegheny-Computer-Science-112-S2018/cs112-S2018-practical6-starter)
 repository and create an issue by clicking the "Issues" tab and then clicking
 the green "New Issue" button. If you have found a problem with the [GatorGrader
 tool](https://github.com/gkapfham/gatorgrader) and the way that it checks you
 assignment, then you can follow the aforementioned steps to create an issue in
 its repository. To ensure that your issue is properly resolved, please provide
 as many details as is possible about the problem that you experienced. If you
-discover a problem with the laboratory assignment sheet, then please raise an
+discover a problem with the practical assignment sheet, then please raise an
 issue in the
 [cs112-S2018-sheets](https://github.com/Allegheny-Computer-Science-112-S2018/cs112-S2018-sheets)
 repository and mention this assignment.
 
 Students who find, and use the appropriate GitHub issue tracker to correctly
-document, a mistake in any aspect of this laboratory assignment will receive
+document, a mistake in any aspect of this practical assignment will receive
 free laptop stickers and extra credit towards their grade for it.
 
 ## Assistance
 
 If you are having trouble completing any part of this project, then please talk
-with either the course instructor or a teaching assistant during the laboratory
+with either the course instructor or a teaching assistant during the practical
 session. Alternatively, you may ask questions in the Slack team for this
 course. Finally, you can schedule a meeting during the course instructor's
 office hours.
